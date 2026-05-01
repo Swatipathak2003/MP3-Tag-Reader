@@ -4,7 +4,7 @@
 
 \## 📌 Overview
 
-This project reads metadata from MP3 files using C programming.  
+This project reads metadata from MP3 files using C programming.
 
 It supports ID3v2.3 tag parsing to extract information like Title and Artist.
 
@@ -12,27 +12,37 @@ It supports ID3v2.3 tag parsing to extract information like Title and Artist.
 
 \## 🚀 Features
 
-\- Reads MP3 files in binary mode  
+\- Reads MP3 files in binary mode
 
-\- Parses ID3v2.3 metadata  
+\- Supports ID3v2.3 parsing
 
-\- Extracts Title and Artist tags  
+\- Extracts Title, Artist, Album, Year, and Genre
 
-\- Demonstrates low-level file handling and parsing  
+\- Demonstrates low-level file handling and parsing
+
+\- Handles missing tags gracefully (no infinite loop)  
+
+\- Validates ID3 version before parsing  
 
 
 
 \## 🛠️ Concepts Used
 
-\- File handling (binary mode)  
+\- File handling (binary mode)
 
-\- Bit manipulation  
+\- Bit manipulation
 
-\- Byte-level parsing  
+\- Byte-level parsing
 
-\- Memory management  
+\- Memory management
 
-\- Structures in C  
+\- Structures in C
+
+\- Parsing variable-length frames using tag size  
+
+\- Handling edge cases in binary file parsing  
+
+\- Preventing infinite loops using boundary checks  
 
 
 
@@ -54,17 +64,9 @@ gcc main.c -o mp3reader
 
 \## 🎯 Future Improvements
 
-\- Extract additional metadata (Album, Year, Genre)  
+\- Add support for other ID3 versions
 
-\- Add support for other ID3 versions  
-
-\- Improve error handling and robustness 
-
-\- Improve parsing logic
-
-\- Improve solution for file not containing the respected metadata 
-
-
+\- Improve error handling and robustness
 
 
 
