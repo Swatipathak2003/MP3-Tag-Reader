@@ -10,12 +10,19 @@ typedef struct{
 typedef struct {
     char artist[50];
     char title[50];
+    char album[50];
+    char year[50];
+    char gener[50];
 }metadata;
 //function to validate mp3 file
 int validate_mp3file(FILE* fp);
 //funtion to read the artist and title of mp3file
-int read_data(FILE* fp,metadata* Metadata);
+void read_data(FILE* fp,metadata* Metadata);
 //function to convert binary to int 
 int convert_to_int(unsigned char* size);
+//function to check the version of mp3 file
+void check_version(FILE*);
+//fuction to print the metadat
+void printdata(FILE*,metadata*);
 
 #endif
