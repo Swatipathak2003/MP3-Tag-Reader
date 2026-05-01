@@ -36,7 +36,7 @@ It supports ID3v2.3 tag parsing to extract information like Title and Artist.
 ### Compile
 
 ```bash
-gcc main.c -o mp3reader
+gcc tag_reader.c tag_function.c -o mp3reader
 ```
 
 ### Run
