@@ -23,6 +23,6 @@ int convert_to_int(unsigned char* size);
 //function to check the version of mp3 file
 void check_version(FILE*);
 //fuction to print the metadat
-void printdata(FILE*,metadata*);
+void printdata(metadata*);
 
 #endif

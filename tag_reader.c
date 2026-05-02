@@ -4,18 +4,14 @@ int main(){
     metadata Metadata;
     metadata Metadata1;
     FILE* fp=fopen("mp3-demo-file.mp3","rb");
-    // if(read_data(fp,&Metadata)){
-    //     printf("The name of artist is %s\n",Metadata.artist);
-    //     printf("The name of title is %s\n",Metadata.title);
-    // }
     int choice;
     do{
         printf("\n");
         printf("1. Validate MP3 file.\n");
         printf("2. Check the version of MP3 file\n");
-        printf("3. Read data from file.\n");
-        printf("4. print the metadata.\n");
-        printf("5. Exit.\n");
+        printf("3. Read and print data from file.\n");
+        // printf("4. print the metadata.\n");
+        printf("4. Exit.\n");
         printf("Enter your choice:");
         if(scanf("%d",&choice)==0){//added buffer to deal with invalid user input
             char buffer[50];
@@ -30,15 +26,15 @@ int main(){
                     break;
             case 3: read_data(fp,&Metadata);
                     break;
-            case 4: printdata(fp,&Metadata);
-                    break;
-            case 5: 
+        //     case 4: printdata(fp,&Metadata);
+        //             break;
+            case 4: 
                     printf("Exiting...\n");
                     break;
             default:
                 printf("Enter correct choice!\n");
         }
-    }while(choice!=5);
+    }while(choice!=4);
     fclose(fp);
 return 0;
 }

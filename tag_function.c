@@ -81,6 +81,8 @@ void read_data(FILE* fp,metadata* Metadata){
         strcpy(Metadata->gener,"NOT FOUND");
         Metadata->gener[9]='\0';
     }
+    //print the data
+    printdata(Metadata);
 }
 
 
@@ -249,8 +251,8 @@ void check_version(FILE* fp){
     }
 }
 
-void printdata(FILE* fp,metadata*Metadata){
-    read_data(fp,Metadata);
+void printdata(metadata*Metadata){
+    // read_data(fp,Metadata);
     printf("Artist: %s\n",Metadata->artist);
     printf("Title:  %s\n",Metadata->title);
     printf("Album:  %s\n",Metadata->album);
