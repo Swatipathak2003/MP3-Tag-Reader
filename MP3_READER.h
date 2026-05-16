@@ -13,16 +13,20 @@ typedef struct {
     char album[50];
     char year[50];
     char gener[50];
+    char track[100];
+    char comment[100];
 }metadata;
 //function to validate mp3 file
 int validate_mp3file(FILE* fp);
 //funtion to read the artist and title of mp3file
-void read_data(FILE* fp,metadata* Metadata);
+void read_data(char* filename,metadata* Metadata);
 //function to convert binary to int 
 int convert_to_int(unsigned char* size);
 //function to check the version of mp3 file
-void check_version(FILE*);
+int check_version(FILE*);
 //fuction to print the metadat
 void printdata(metadata*);
-
+void editdata(FILE*);
+void editfile(int argc,char* argv[]);
+void edit_data(FILE* fp,frame* newFrame,char* tag);
 #endif
